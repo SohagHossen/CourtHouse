@@ -1,0 +1,64 @@
+{%extends 'Base.html' %}
+{%block content %}
+<h3>This is Lower  page </h3>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+</style>
+<div>
+
+
+    <table>
+  <tr>
+        <th> Case Id</th>
+        <th> Case Name</th>
+        <th>Court Name</th>
+        <th>Address </th>
+        <th>Room Number </th>
+        <th> Date Time </th>
+        <th> Judge id</th>
+        <th> Judge name</th>
+
+
+  </tr>
+    {{ court  }}
+{% for data in court  %}
+
+  <tr>
+      <td>
+              {% for i in data.cases_id %}
+              <p> {{i.case_id }}</p>
+              {% endfor %}
+      </td>
+      <td>
+              {% for j in data.cases_id %}
+              <p> {{j.case_name  }}</p>
+              {% endfor %}
+      </td>
+     <td>{{ data.court_name}}</td>
+     <td>{{ data.address }}</td>
+     <td>{{ data.room_number}}</td>
+     <td>{{ data.timedate}}</td>
+     <td>
+          {% for i in data.judge_data %}
+          <p> {{i.judge_id  }}</p>
+          {% endfor %}
+     </td>
+     <td>
+          {% for j in data.judge_data %}
+          <p> {{j.judge_name  }}</p>
+          {% endfor %}
+     </td>
+
+  </tr>
+{% endfor %}
+
+</table>
+
+
+</div>
+
+{%endblock %}

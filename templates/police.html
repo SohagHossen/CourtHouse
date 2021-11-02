@@ -1,0 +1,75 @@
+{%extends 'Base.html' %}
+{%load static %}
+{%block content %}
+
+	<section class="ftco-section">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-12">
+                        <div class="main" style="margin-bottom: 10px">
+                                     <div class="col-md-12">
+                                         <h4 style="background: cyan" class="text-center mb-4">Show All Case </h4>
+                                     </div>
+                                  <!-- Another variation with a button -->
+                                  <div class="input-group" style="width: 20%">
+                                    <input type="text" class="form-control" placeholder="Enter Case Id ">
+                                    <div class="input-group-append">
+                                      <button class="btn btn-secondary" type="button">
+                                        <i class="fa fa-search"></i>
+                                      </button>
+
+                                    </div>
+
+                                  </div>
+
+                          </div>
+
+                        <div class="table-wrap">
+						<table class="table">
+					    <thead class="thead-primary">
+					      <tr>
+					        <th>Police ID</th>
+					        <th>Police Name </th>
+					        <th>Rank</th>
+					        <th>Station Name </th>
+					        <th>Case Id</th>
+					        <th>Case Name </th>
+					      </tr>
+					    </thead>
+					    <tbody>
+					     {% for police_data in police %}
+
+                              <tr>
+                                <td>{{ police_data.police_id}}</td>
+                                <td>{{police_data.police_name }}</td>
+                                 <td>{{ police_data.police_post}}</td>
+                                <td>{{police_data.police_station }}</td>
+                                <td>
+                                      {% for data in police_data.police_cases %}
+                                      <p> {{data.case_id  }}</p>
+                                      {% endfor %}
+                                </td>
+                                <td>
+                                      {% for data in police_data.police_cases %}
+                                      <p> {{data.case_name  }}</p>
+                                      {% endfor %}
+                                </td>
+
+                              </tr>
+                            {% endfor %}
+
+
+
+
+					    </tbody>
+					  </table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+{%endblock %}

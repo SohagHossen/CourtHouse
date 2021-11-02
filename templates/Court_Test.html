@@ -1,0 +1,64 @@
+{%extends 'Base.html' %}
+{%load static %}
+ {% load bootstrap5 %}
+{%block content %}
+<h3>This is court   page </h3>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+</style>
+<div>
+
+
+    <table>
+  <tr>
+        <th>Court Name  </th>
+        <th>Address</th>
+        <th>Roome Number</th>
+        <th> time date  </th>
+        <th> case id</th>
+        <th> case name</th>
+
+
+  </tr>
+{% for data in court_details  %}
+
+  <tr>
+     <td>{{ data.court_name }}</td>
+     <td>{{ data.address }}</td>
+     <td>{{ data.room_number}}</td>
+     <td>{{ data.timedate}}</td>
+     <td>
+         {% for i in data.cases_id %}
+          <p> {{i.case_id  }}</p>
+          {% endfor %}
+     </td>
+     <td>
+         {% for i in data.judge_data %}
+          <p> {{i.judge_id}}</p>
+          {% endfor %}
+     </td>
+
+  </tr>
+{% endfor %}
+
+</table>
+
+
+</div>
+
+
+
+<form action ="{%url 'ncase'%}" method="post">
+    {% bootstrap_form  %}
+    {% buttons %}
+        <button type="submit" class="btn btn-primary">Submit</button>
+    {% endbuttons %}
+
+</form>
+
+
+{%endblock %}

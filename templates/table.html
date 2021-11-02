@@ -1,0 +1,137 @@
+
+{% load static  %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="{% static 'table/css/style.css' %}">
+
+	</head>
+	<body>
+<!--navbar-->
+    <nav style="background-color:#101010"class="navbar navbar-expand-lg navbar-light bg-light navbar fixed-top navbar-light ">
+        <a class="navbar-brand" href="#">
+    <img src="{% static 'images/Logo/01.ico' %}" width="30" height="30" class="d-inline-block align-top" alt="">
+    CourtHouse
+  </a>
+
+  </div>
+         <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+        <ul class="navbar-nav ml-auto">
+
+
+            <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Police</a>
+            </li><li class="nav-item">
+                <a class="nav-link" href="#">Judge</a>
+            </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Dropdown
+                </a>
+                <div  class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">logout</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+	<section class="ftco-section">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-12">
+                        <div class="main" style="margin-bottom: 10px">
+                                     <div class="col-md-12">
+                                         <h4 class="text-center mb-4">Create Your Domain Name</h4>
+                                     </div>
+                                  <!-- Another variation with a button -->
+                                  <div class="input-group" style="width: 20%">
+                                    <input type="text" class="form-control" placeholder="Search this blog">
+                                    <div class="input-group-append">
+                                      <button class="btn btn-secondary" type="button">
+                                        <i class="fa fa-search"></i>
+                                      </button>
+
+                                    </div>
+
+                                  </div>
+
+                          </div>
+
+                        <div class="table-wrap">
+						<table class="table">
+					    <thead class="thead-primary">
+					      <tr>
+					        <th>TLD</th>
+					        <th>Duration</th>
+					        <th>Registration</th>
+					        <th>Renewal</th>
+					        <th>Transfer</th>
+					        <th>Register</th>
+					      </tr>
+					    </thead>
+					    <tbody>
+					      <tr>
+					        <th scope="row" class="scope" >.com</th>
+					        <td>1 Year</td>
+					        <td>$70.00</td>
+					        <td>$5.00</td>
+					        <td>$5.00</td>
+					        <td><a href="#" class="btn btn-primary">Sign Up</a></td>
+					      </tr>
+					      <tr>
+					        <th scope="row" class="scope" >.net</th>
+					        <td>1 Year</td>
+					        <td>$75.00</td>
+					        <td>$5.00</td>
+					        <td>$5.00</td>
+					        <td><a href="#" class="btn btn-primary">Sign Up</a></td>
+					      </tr>
+
+
+					      <tr>
+					        <th scope="row" class="scope border-bottom-0">.me</th>
+					        <td class="border-bottom-0">1 Year</td>
+					        <td class="border-bottom-0">$45.00</td>
+					        <td class="border-bottom-0">$5.00</td>
+					        <td class="border-bottom-0">$5.00</td>
+					        <td class="border-bottom-0"><a href="#" class="btn btn-primary">Sign Up</a></td>
+					      </tr>
+					    </tbody>
+					  </table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script src="{% static 'table/js/jquery.min.js' %}"></script>
+  <script src="{% static 'table/js/popper.js' %}"></script>
+  <script src="{% static 'table/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'table/js/main.js' %}"></script>
+
+	</body>
+</html>
+
